@@ -1,7 +1,8 @@
 <template>
   <div>
-      <h1>About this page</h1>
-      <p>This is an app to display corny jokes</p>
+      <h1>tssdfadsfsadfasfas</h1>
+      <p>tssdfadsfsadfasfas</p>
+      <Tutorial/>
   </div>
 </template>
 

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "Jokes",
+    "path": "/Jokes",
+    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/Jokes/index.vue",
+    "chunkName": "pages/Jokes/index"
+  },
+  {
+    "name": "test.html",
+    "path": "/test.html",
+    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/test.html.vue",
+    "chunkName": "pages/test.html"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "data-region-industry",
+    "path": "/*",
+    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/test.html.vue"
+  }
+]
