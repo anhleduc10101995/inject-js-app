@@ -1,0 +1,215 @@
+<link href="https://dev.bestar.ca/synode/public/build/styles.css" rel="stylesheet">
+<script src="../../public/build/app.js"></script>
+<!-- Top controls container -->
+<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <div class="flex-shrink-0">
+      <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
+    </div>
+    <div>
+      <div class="text-xl font-medium text-black">ChitChat</div>
+      <p class="text-gray-500">You have a new message!</p>
+    </div>
+  </div>
+
+
+<div id="hardware-list-sideBar" class="flex flex-col h-full z-20 bg-white">
+    <div class="flex items-center justify-between p-1 mb-2">
+        <h4 class="mb-0">  </h4>
+        <i class="js-hardware-list c-icon c-icon--xs icon-clear cursor-pointer "></i>
+    </div>
+    <div class="h-full overflow-hidden overflow-y-auto">
+        <div class="js-step-hardware flex-1 px-1">
+        </div>
+    </div>
+
+</div> 
+<!-- Preview Trigger-->
+
+<div id="preview-trigger-container"  class="absolute w-full z-20" >
+            
+        <!-- Preview indicator-->
+        <div class="flex justify-center pr-2 w-full h-full items-center">
+            <!-- Preview -->
+            
+            <div class="js-preview-trigger flex items-center cursor-pointer">    
+                <a class="c-btn c-btn--fab c-btn--fab--sm mr-2">
+                    <i class="c-icon c-icon--xs icon-arrow-left text-accent-400 c-icon--rotate-90"></i>
+                </a>         
+                <h4 class="mt-2"></h4>
+            </div>     
+            <!-- <a class="js-preview-trigger c-btn c-btn--fab c-btn--fab--sm mr-2">
+                <i class="c-icon c-icon--xs icon-arrow-left text-accent-400"></i>
+            </a>         
+            <h4 class="mt-2">Preview Step</h4> -->
+        </div>
+
+</div>
+
+
+<!-- 3D scene's main container for the controls and 3D scene itself -->
+<div class="js-scene-3d-status relative flex flex-col justify-between w-full h-full p-4">
+
+    <!-- The 3D scene init -->
+    <div class="scene-3d-init absolute inset-0 w-full h-full z-20 bg-white">
+       
+            <img class="absolute w-full h-full object-contain" alt="<?php the_title(); ?>" src="<?php echo $image['local'] ?>"></a>
+
+        <div class="init-scene-3d-overlay absolute w-full h-full inset-0"></div>
+        <div class="js-init-scene-3d init-scene-3d cursor-pointer h-6 w-6 text-center rounded-full bg-white absolute">
+            <i class="c-icon c-icon--xs icon-play text-white absolute"></i>
+        </div>
+    </div>
+    
+    <!-- The 3D scene loading -->
+    <div class="scene-3d-loading absolute inset-0 w-full h-full z-20">
+	
+	</div>
+
+    <!-- The 3D scene Replay -->
+    <div class="scene-3d-replay absolute inset-0 w-full h-full z-20">
+        <div class="replay-scene-3d-overlay absolute w-full h-full inset-0"></div>
+         <div class="js-replay-scene-3d replay-scene-3d cursor-pointer h-6 w-6 text-center rounded-full bg-white absolute">
+            <i class="c-icon c-icon--xs icon-replay text-white absolute text-accent-400"></i>
+        </div>
+	</div>
+
+    <!-- The 3D scene -->
+    <div id="" class="absolute inset-0 w-full h-full z-10">
+             <div id="scene-3d" class="relative inset-0 w-full h-full overflow-hidden">
+
+             </div>     
+    </div>     
+
+    <!-- Top controls container -->
+    <div class="flex justify-between z-10">
+
+        <!-- Top-Left-Side Component -->
+        <div class="flex flex-col items-center">
+            <!-- Mute button -->
+            <a class="js-toggle-mute c-btn c-btn--fab c-btn--fab--lg is-volume">
+                <i class="mute-icon c-icon c-icon--md icon-mute text-accent-400"></i>
+                <i class="volume-icon c-icon c-icon--md icon-volume text-accent-400"></i>
+            </a>
+            <!-- info button -->
+            <a class="js-info-guide c-btn c-btn--fab c-btn--fab--sm mt-2">
+                <i class="c-icon c-icon--xs icon-info text-accent-400"></i>
+            </a>
+            <!-- info button -->
+            <a class="js-hardware-list c-btn c-btn--fab c-btn--fab--sm mt-2">
+                <i class="c-icon c-icon--xs icon-cog text-accent-400"></i>
+            </a>
+        </div>
+        
+        <!-- Fullscreen toggle button -->
+        <div class="js-trigger-3d-assembly-fullscreen-view flex items-center justify-center w-4 h-4 rounded-sm bg-accent opacity-50 cursor-pointer">
+            <i class="c-icon c-icon--sm icon-expand text-surface-300"></i>
+        </div>
+
+    </div> 
+    <!-- Guide Popup toggle button -->
+    <div class=" absolute z-20 guide-popup inset-0 w-full h-full">             
+        <div class="flex relative guide-popup-box flex-col bg-white  inset-0 ">
+            <a class="js-guide-close guide-close absolute c-btn c-btn--fab c-btn--fab--sm">
+                <i class="c-icon c-icon--xs icon-clear text-accent-400"></i>
+            </a>  
+            <div  class="guide-popup_content flex relative flex-col w-full h-full inset-0 overflow-hidden">         
+                <div class="flex justify-center items-center mx-8 my-2"> 
+                    <img class="ml-2" src="<?php echo get_template_directory_uri(); ?>/assets/images/iconfinder_icon_24_one_finger_tap_329363.svg">
+                    <div class="ml-2">                        
+                        Rotate object by clicking and rotating
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mx-8 my-2"> 
+                    <img class="ml-2" src="<?php echo get_template_directory_uri(); ?>/assets/images/iconfinder_icon_44_one_finger_swipe_329371.svg">
+                    <div class="ml-2">                        
+                        Scroll your cursor to zoom in and out
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mx-8 my-2"> 
+                    <img class="ml-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/iconfinder_icon_26_thumb_finger_tap_329388.svg">
+                    <div class="ml-2">
+                        Hold Command and drag cursor to move object
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute steps-preview-scrollview inset-0 w-full h-full ">             
+        <div class="flex relative steps-preview-scrollview-box flex-col bg-white  inset-0 ">
+            <a class="js-step-preview-close guide-close absolute c-btn c-btn--fab c-btn--fab--sm">
+                <i class="c-icon c-icon--xs icon-clear text-accent-400"></i>
+            </a>  
+            <!-- Flickity HTML init -->
+            <div class="carousel js-steps-preview-carousel "
+                data-flickity='{ "freeScroll": true  , "pageDots": false }'>
+ 
+                
+                <div class="carousel-cell flex i-<?php echo $index ?> ">
+                    
+                    <div class="carousel-cell-content js-steps-preview-cell relative cursor-pointer">                     
+                    
+                        <img class="w-full h-full object-cover z-10" alt="" src="<?php echo $image_url ?>"></a>
+                        <div class="z-20 w-full h-full cell-selection-overlay absolute inset-0">
+                            <h4 class="mt-2 ml-2">Current step</h4>
+                        </div>
+                                            
+                    </div>         
+                    
+                </div>
+                                  
+            </div>
+            <a class="c-btn c-btn--secondary steps-preview-step-indicator js-steps-preview-step-indicator absolute">
+                <span class="js-steps-preview-step-indicator-current">1</span>  <span></span>
+            </a>
+        </div>
+    </div>
+    <!-- Bottom controls container -->
+    <div class="flex items-center justify-between z-10">
+            
+        <!-- Progress indicator and step title container -->
+        <div class="flex items-center pr-2">
+
+            <!-- Progress indicator -->
+            <div  class="flex relative mr-2 rounded-full shadow-sm">
+                <svg height="60" width="60">
+                    <circle class="step-progress js-step-progress" transform="rotate(-90 30 30)" cx="30" cy="30" r="28" stroke="#F1221B" stroke-width="2" fill="#fff" style="stroke-dasharray: 175.645px; stroke-dashoffset: 175.645px;"></circle>
+                </svg> 
+                <h3 class="js-populate-with-step-number absolute inset-0 text-center text-accent-400 leading-7 mb-0">0</h3>
+            </div>
+
+            <!-- Step title -->
+            <p class="js-populate-with-step-title mb-0" id="speech-text"></p>
+        
+        </div>
+
+        <!-- Navigation controls (previous, play/pause and next)-->
+        <div class="flex items-center">
+
+            <!-- Previous -->
+            <a class="js-previous-step c-btn c-btn--fab c-btn--fab--sm">
+                <i class="c-icon c-icon--xs icon-arrow-left text-accent-400"></i>
+            </a>
+
+             <!-- Play/pause -->
+            <a class="js-toggle-play c-btn c-btn--fab mx-2 is-play" id="playButton">
+                <i class="play-icon c-icon c-icon--sm icon-play text-accent-400"></i>
+                <i class="pause-icon c-icon c-icon--sm icon-pause text-accent-400"></i>
+                <i class="replay-icon c-icon c-icon--sm icon-replay text-accent-400"></i>
+            </a>
+
+            <!-- Next -->
+            <a class="js-next-step c-btn c-btn--fab c-btn--fab--sm">
+                <i class="c-icon c-icon--xs icon-arrow-right text-accent-400"></i>
+            </a>
+
+        </div>
+            
+    </div>
+
+</div>
+
+<table id="speech-text-table"></table>
+
+<audio class="hidden js-audio-player-el" controls="controls">
+    <source class="js-audio-player-el-src" src=""></source>
+</audio>

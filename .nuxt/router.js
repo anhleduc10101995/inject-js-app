@@ -36,10 +36,6 @@ export const routerOptions = {
     path: "/",
     component: _72f1c736,
     name: "index"
-  }, {
-    path: "/*",
-    component: _14fdb9cc,
-    name: "data-region-industry"
   }],
 
   fallback: false

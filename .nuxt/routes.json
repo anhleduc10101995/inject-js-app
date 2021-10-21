@@ -3,29 +3,28 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_b2617cc0"
   },
   {
     "name": "Jokes",
     "path": "/Jokes",
     "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/Jokes/index.vue",
-    "chunkName": "pages/Jokes/index"
+    "chunkName": "pages/Jokes/index",
+    "_name": "_43cd9eaa"
   },
   {
     "name": "test.html",
     "path": "/test.html",
     "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/test.html.vue",
-    "chunkName": "pages/test.html"
+    "chunkName": "pages/test.html",
+    "_name": "_14fdb9cc"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/index.vue",
-    "chunkName": "pages/index"
-  },
-  {
-    "name": "data-region-industry",
-    "path": "/*",
-    "component": "/Users/leanh/Desktop/nestJS/inject-js-app/inject-js-app/pages/test.html.vue"
+    "chunkName": "pages/index",
+    "_name": "_72f1c736"
   }
 ]

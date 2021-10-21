@@ -1,15 +1,15 @@
 export default {
   ssr: false,
   router: {
-    extendRoutes(routes, resolve) {
-		routes.push(
-		  {
-			name: 'data-region-industry',
-			path: '/*',
-			component: resolve(__dirname, 'pages/test.html.vue'),
-		  }
-		)
-	  }
+    // extendRoutes(routes, resolve) {
+	// 	routes.push(
+	// 	  {
+	// 		name: 'data-region-industry',
+	// 		path: '/*',
+	// 		component: resolve(__dirname, 'pages/test.html.vue'),
+	// 	  }
+	// 	)
+	//   }
 	  
   },
 
